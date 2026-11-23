@@ -1,0 +1,2811 @@
+body {
+    margin: 0;                 /*removes default outer space */
+    font-family: Arial, sans-serif; 
+    color: #333;               /*sets the text color */
+    background-color: white;   
+}
+/* styles all main headings */
+
+h1, h2, h3 {
+    text-align: center;        /*centers the heading text */
+}
+
+
+header {
+    background-color: #d3e7f5; 
+    padding: 20px;             /* space inside the header */
+}
+
+.header-content {
+    display: flex;             /* arranges them in a row */
+    align-items: center;       
+    max-width: 1100px;         
+    margin: auto;              /* centers the container */
+}
+
+.header-content .logo{
+    margin-right: 15px;
+}
+
+.logo {
+    width: 75px;               
+    height: auto;              
+}
+
+.header-content h2 {
+    margin: 0;                 /* removes default heading margin */
+    text-align: left;         
+}
+
+.header-content p {
+    margin: 5px 0;             /* adds vertical spacing */
+}
+
+
+.navigation {
+    display: flex;             /* required flexbox layout */
+    justify-content: flex-end;   
+    flex-wrap: wrap;           /* allows links to move to next row */
+    background-color: #173B63;
+    padding: 12px;
+}
+
+.navigation a {
+    color: white;               /* link color */
+    text-decoration: none;     /* removes underline */
+    font-size: 14px;
+    margin-right: 25px;       /*space between links */
+}
+
+/* changes the link style when mouse is over it */
+
+.navigation a:hover {
+    color: #6499c5;
+    text-decoration: underline;
+}
+
+
+section {
+    padding: 35px 20px;        /* inner spacing */
+    text-align: center;        
+}
+
+section h2 {
+    margin-bottom: 20px;       /* space below section titles */
+}
+
+
+.welcome {
+    padding: 55px 20px;
+    background-color: #f0f7fc;
+}
+
+.welcome h1 {
+    font-size: 28px;          
+}
+
+.welcome p {
+    line-height: 1.8;          /* space between text lines */
+    margin-bottom: 25px;
+}
+
+
+
+/* these are <a> links, not actual button elements but they are styled like buttons */
+
+.button {
+    display: inline-block;    /* allows padding and dimensions */
+    background-color: #285e8e;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 7px;
+}
+
+/* changes button appearance on hover */
+.button:hover {
+    background-color: #6499c5;
+}
+
+
+.cards {
+    display: flex;             /* arranges cards horizontally */
+    justify-content: center;   
+    flex-wrap: wrap;           /* wraps cards if space is limited */
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.experiences {
+    background-color: #d3e7f5;
+}
+
+/* styles each offering card */
+
+.card {
+    background-color: white;
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #6499C5;
+    border-radius: 7px;
+}
+
+.card,.destination-card,.review{     /*add space around all types of cards*/
+    margin: 12px;
+}
+
+/* styles images inside offering cards */
+
+.card img {
+    width: 100%;               
+    height: auto;
+    border-radius: 7px;
+}
+
+.card h3 {
+    font-size: 17px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* hides additional information by default */
+
+.extra-info {
+    display: none;
+}
+
+/* displays extra information when hovering over a card */
+
+.card:hover .extra-info {
+    display: block;
+}
+
+/* changes the card background on hover */
+
+.card:hover {
+    background-color: #b8d8ee;
+}
+
+
+.destinations {
+    background-color: #f0f7fc;
+}
+
+/* styles country cards */
+
+.destination-card {
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #6499c5;
+    border-radius: 7px;
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.destination-card h3 {
+    margin-bottom: 8px;
+}
+
+.destination-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+
+.reviews {
+    background-color: #d3e7f5;
+}
+
+.review {
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #6499c5;
+    border-radius: 7px;
+}
+
+.review p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* changes star rating color and size */
+
+.stars {
+    color: #a97700;
+    font-size: 22px;
+}
+
+
+footer {
+    background-color: #f0f7fc;
+    color: #173B63;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;             /* arranges logo and text in one row */
+    align-items: center;       /* centers items vertically */
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact{
+    margin: 15px;
+}
+.footer-content h3 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.footer-content p {
+    font-size: 13px;
+    margin: 5px 0;
+}
+.mailLink {
+    text-decoration: none;
+    color: #173B63;
+}
+
+.mailLink:hover {
+    color: #6499c5;
+    text-decoration: underline;
+}
+/* applies these styles to screens 600px wide or less */
+
+@media screen and (max-width: 600px) {
+
+    .cards {
+        flex-direction: column; /* Stacks cards vertically */
+        align-items: center;
+    }
+
+    .card, .destination-card, .review {
+        width: 85%;             /* Uses most of the screen width */
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* ========== CLUB OFFERINGS PAGE ========== */
+
+.offerings-intro {
+    background-color: #F0F7FC; 
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.offerings-intro h1 {
+    color: #173B63; 
+    font-size: 28px;
+}
+
+.offerings-intro p {
+    color: #285E8E;
+    line-height: 1.8;
+}
+
+
+.filters {
+    background-color: #D3E7F5;
+    padding: 25px;
+}
+
+/* flexbox arranges the two filters horizontally */
+.filter-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* groups the label and its drop-down list */
+
+.filter-box {
+    margin: 10px;
+    text-align: left;
+}
+
+/* styles filter labels */
+
+.filter-box label {
+    display: block;
+    color: #173B63;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* styles the drop-down lists */
+
+.filter-box select {
+    width: 190px;
+    padding: 10px;
+    color: #173B63;
+    background-color: white;
+    border: 2px solid #6499C5;
+    border-radius: 7px;
+}
+
+
+/* background of all available workshops */
+
+.all-offerings {
+    background-color: #D3E7F5;
+    padding: 30px 20px;
+}
+
+/* flexbox arranges workshop cards in rows */
+
+.offering-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1050px;
+    margin: auto;
+}
+
+/* styles each individual workshop card */
+
+.offering-card {
+    background-color: white;
+    border: 2px solid #6499C5;
+    width: 275px;
+    padding: 15px;
+    margin: 12px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+/* sets the size of workshop images */
+
+.offering-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+/* styles workshop names */
+
+.offering-card h3 {
+    color: #173B63;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+/* styles workshop descriptions */
+
+.offering-card p {
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* makes the offering price more noticeable */
+
+.offering-card .price {
+    color: #285E8E;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* changes card background on mouse hover */
+
+.offering-card:hover {
+    background-color: #F0F7FC;
+}
+
+.recommendations {
+    background-color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+/* styles the recommendation heading */
+
+.recommendations h2 {
+    color: #173B63;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* adjusts the page on screens 600px or smaller */
+
+@media screen and (max-width: 600px) {
+
+    /* stacks filters vertically */
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* stacks workshop cards vertically */
+
+    .offering-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* adjusts card width for small screens */
+
+    .offering-card {
+        width: 85%;
+    }
+
+    }
+
+    .card img.bookmark-image,.offering-card img.bookmark-image{
+     width: 18px;
+     height: auto;
+     margin-left: 10px;
+    }
+
+    .offering-card h3{
+    height: 45px;
+    }
+
+    .offering-card p{
+    height: 35px;
+    }
+	/* Manage Activity Leaders Page */
+
+	.leaders-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f7fc;
+   
+
+}
+
+.leaders-section h2 {
+    margin-bottom: 30px;
+}
+
+.leaders-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.leader-card {
+    text-align: center;
+    width: 180px;
+}
+
+.leader-card img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.leader-card label {
+    display: block;
+    margin-top: 10px;
+}
+
+.leaders-section button {
+    padding: 10px 25px;
+    background-color: #163a63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+/* Add New Activity Leader Form */
+
+.add-leader-section {
+padding: 40px 20px;
+text-align: center;
+background-color: #d3e7f5;
+}
+.add-leader-section h2 {
+margin-bottom: 10px;
+}
+.add-leader-section p {
+margin-bottom: 25px;
+}
+.leaders-back-link {
+    display: inline-block;
+    margin: 20px 0 0 30px;
+    color: #173b63;
+    font-size: 14px;
+}
+.add-leader-section form {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #6499c5;
+    border-radius: 12px;
+    text-align: left;
+    box-sizing: border-box;
+}.add-leader-section .form-row {
+display: flex;
+gap: 15px;
+}
+.add-leader-section .form-field {
+flex: 1;
+min-width: 0;
+}
+.add-leader-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #173b63;
+}.add-leader-section input,
+.add-leader-section select {
+width: 100%;
+padding: 10px;
+border: 1px solid #cccccc;
+border-radius: 7px;
+box-sizing: border-box;
+}
+.add-leader-section button {
+width: 100%;
+margin-top: 20px;
+padding: 12px;
+background-color: #163a63;
+color: white;
+border: none;
+cursor: pointer;
+    border-radius: 7px;
+}
+/* Small screens */
+@media (max-width: 600px) {
+.add-leader-section .form-row {
+flex-direction: column;
+gap: 0;
+}
+}
+/* Offering Evaluation Page */
+
+.evaluation-section {
+    padding: 50px 150px;
+    text-align: left;
+    background-color: #f0f7fc;
+}
+
+.evaluation-section h2 {
+    margin-bottom: 10px;
+    text-align: left;
+
+}
+
+.evaluation-section > p {
+    margin-bottom: 25px;
+}
+
+.evaluation-section form {
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #6499c5;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.evaluation-section h3 {
+    margin-bottom: 20px;
+    text-align: left;
+    color: #173b63;
+    font-weight: bold;
+}
+
+.evaluation-section form > label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #173b63;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+
+}
+.join_form select,
+.join_form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.evaluation-section .rating-title {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #173b63;
+    font-size: 14px;
+    font-weight: bold;
+}/* Star Rating */
+.join_form .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.join_form .star-rating input {
+    opacity: 0;
+    position: absolute;
+}
+
+.join_form .star-rating label {
+    font-size: 45px;
+    color: #bdbdbd;
+    cursor: pointer;
+}
+
+.join_form .star-rating label:hover,
+.join_form .star-rating label:hover ~ label,
+.join_form .star-rating input:checked ~ label {
+    color: #163a63;
+}
+
+.join_form .rating-note {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #666666;
+    font-size: 14px;
+}
+
+
+.evaluation-section button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #163a63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.evaluation-section .back-link {
+    margin-top: 20px;
+}
+
+.evaluation-section .back-link a {
+    color: #163a63;
+}
+/* Evaluation page final adjustments */
+
+.evaluation-section .back-link {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.evaluation-footer {
+    background-color: #d3e7f5;
+}
+
+/* =========================
+   5. Participation Requests
+========================= */
+section.requests{
+    background-color: #F0F7FC ;
+}
+.request_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.request_heading h2 {
+    margin: 0 0 10px;
+}
+
+.request_heading p {
+    margin: 0;
+}
+
+.request_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.request_card {
+    width: 27%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 2px solid #6499C5;
+    border-radius: 7px;
+}
+
+.request_img {
+    display: block;
+    width: 100%;
+    height: 145px;
+    border-radius: 7px;
+}
+
+.request_card h3 {
+    margin: 12px 0;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+/* =========================
+   6. Request Date and Cost
+========================= */
+
+.request_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #e1e8e8;
+    background-color: #f5f8f6;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+.request_info span.attribute,
+.status span.attribute {
+    font-weight: bold;
+}
+
+
+/* =========================
+   7. Request Status
+========================= */
+
+.request_status_info {
+    margin-top: 10px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+.pending {
+    color: #926600;
+    border: 2px solid #fbecb8;
+    background-color: #fff3cd;
+}
+
+.declined {
+    color: #b42318;
+    border: 2px solid #ffdedc;
+    background-color: #fde8e7;
+}
+
+.completed {
+    color: #237547;
+    border: 2px solid #c8e3cf;
+    background-color: #e1f3e6;
+}
+
+
+/* =========================
+   8. Explore and Engage
+========================= */
+
+section.completed_section{
+    background-color: #D3E7F5;
+}
+.completed_actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.explore_engage_content {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 12px;
+    border: 2px solid #6499C5;
+    background-color: #fbfdfc;
+    border-radius: 7px;
+}
+
+
+.explore_engage_img {
+    width: 190px;
+    height: 115px;
+    border-radius: 7px;
+}
+
+.explore_engage_text {
+    flex: 1;
+}
+
+.explore_engage_text h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.explore_engage_text p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.explore_engage_link {
+    margin-left: auto;
+}
+
+.explore_engage_link a:hover{
+    background-color: #6499c5;
+}
+
+.explore_engage_link a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border: 1px solid #285e8e;
+    background-color: #285e8e;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+
+
+/* =========================
+   9. Build My Travel Experience
+========================= */
+section.travel_section{
+    background-color: white ;
+}
+
+.travel_intro {
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.saved_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.saved_card {
+    width: 300px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 2px solid #6499C5;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.saved_card:hover{
+    background-color: #F0F7FC;
+}
+
+.saved_img {
+    display: block;
+    width: 100%;
+    height: 145px;
+    border-radius: 7px;
+}
+
+.saved_details {
+    display: flex;
+    align-items: center;
+}
+
+.saved_details h3 {
+    margin: 12px 0 8px;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.saved_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.saved_price p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.bookmark_img {
+    width: 22px;
+    height: 26px;
+}
+
+/* Member Dashboard - Heading Alignment */
+
+.request_heading h2,
+.completed_section h2,
+.travel_section  h2,
+.explore_engage_text h3{
+    text-align: left;
+}
+
+
+/* Member Dashboard - Paragraph Alignment */
+.request_heading p,
+.travel_intro,
+.request_info,
+.status,
+.explore_engage_text p,
+.saved_card p {
+    text-align: left;
+}
+
+/* Member Dashboard - Heading Alignment */
+.request_card h3{
+    text-align: center;
+}
+
+.saved_details h3 {
+    width: 100%;
+    text-align: center;
+}
+
+/* =========================
+   10. Request to Join Page
+========================= */
+
+.request_form_page {
+    padding: 20px;
+    background-color: white;
+}
+
+.request_content_container {
+    max-width: 100%;
+    margin: 0 auto 30px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+
+/* Hero Image */
+
+.form_hero {
+    height: 280px;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.form_hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+
+/* Form Introduction */
+
+.form_intro {
+    padding: 0 24px 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.form_intro h2 {
+    margin: 0 0 10px;
+    color: #123f5b;
+    line-height: 1.3;
+}
+
+.form_intro p {
+    margin: 0;
+    color: #123f5b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Form Section */
+
+.form_section {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 28px;
+    box-sizing: border-box;
+    border: 1px solid #6499c5;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.request_content_container .form_hero {
+    margin-top: 0;
+}
+
+.request_content_container .form_section {
+    margin-bottom: 0;
+}
+
+
+/* Form Heading */
+
+.form_heading {
+    padding: 15px 18px;
+    margin: -28px -28px 25px;
+    border-bottom: 1px solid #6499c5;
+    background-color: #F0F7FC;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.form_heading h3 {
+    margin: 0;
+    color: #123f5b;
+}
+
+
+/* Form Fields */
+
+.join_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join_form label {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    color: #123f5b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.join_form label span {
+    color: #d93025;
+}
+
+.join_form select,
+.join_form input[type="text"],
+.join_form input[type="date"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #6499c5;
+    background-color: white;
+    color: #123f5b;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+.submit_request {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    background-color: #285e8e;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border-radius: 7px; 
+}
+
+.submit_request:hover{
+    background-color: #6499c5;
+}
+/* Back Link */
+
+.back_link {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.back_link a {
+    color: #123f5b;
+    font-size: 14px;
+}
+
+.back_link a:hover {
+    color: #6499c5;
+} 
+
+/* Request to Join Page */
+.form_intro h2 {
+    text-align: left;
+}
+
+.form_heading h3 {
+    text-align: left;
+}
+
+.join_form {
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+
+    .request_card {
+        width: 48%;
+    }
+
+    .explore_engage_content {
+        flex-wrap: wrap;
+    }
+
+    .explore_engage_link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .member-dashboard-page main,
+    .request_form_page {
+    padding: 12px;
+    }
+
+    .member-dashboard-page section {
+    padding: 16px;
+    }
+
+    .request_header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .request_card {
+        width: 100%;
+    }
+
+    .explore_engage_content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .explore_engage_img {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .saved_card {
+        width: 100%;
+    }
+
+    .request_form_page {
+        padding: 12px;
+    }
+
+    .request_content_container {
+        padding: 14px;
+    }
+
+    .form_hero {
+        height: 200px;
+    }
+
+    .form_intro {
+        padding: 0 4px 8px;
+    }
+
+    .form_intro h2 {
+        font-size: 25px;
+    }
+
+    .form_intro p {
+        font-size: 14px;
+    }
+
+    .form_section {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form_heading {
+        margin: -20px -20px 22px;
+    }
+}
+
+
+/* Submitted Requests */
+.submitted_requests {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+}
+
+.submitted_request {
+    background-color: #F0F7FC;
+    border: 1px solid #6499c5;
+    border-radius: 12px;
+    padding: 15px;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.submitted_request h3 {
+    color: #3f5f8b;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.submitted_request p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.submitted_request strong {
+    color: #3f5f8b;
+}
+
+/* =========================================================
+   Phase 3 - Member Dashboard & Request to Join Responsive
+========================================================= */
+
+/* Responsive images */
+.member-dashboard-page img,
+.request-join-page img {
+    max-width: 100%;
+}
+
+/* Tablets: two request cards per row */
+@media screen and (max-width: 900px) {
+
+    .request_list {
+        gap: 20px;
+    }
+
+    .request_card {
+        width: 47%;
+    }
+}
+
+/* Phones: same rules as the Home page */
+@media screen and (max-width: 600px) {
+
+    .member-dashboard-page .navigation,
+    .request-join-page .navigation {
+        justify-content: center;
+    }
+
+    .member-dashboard-page .navigation a,
+    .request-join-page .navigation a {
+        margin: 8px;
+    }
+
+    .member-dashboard-page .header-content,
+    .request-join-page .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .member-dashboard-page .footer-content,
+    .request-join-page .footer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .request_card {
+        width: 100%;
+    }
+
+    .explore_engage_link,
+    .explore_engage_link a {
+        width: 100%;
+    }
+
+    .submitted_request {
+        width: 100%;
+    }
+}
+
+/*===============================*/
+body.salma-page {
+margin: 0;
+font-family: Arial, sans-serif;
+color: #333;
+background-color: white;
+}
+
+.salma-page main {
+margin: 0;
+padding: 0;
+}
+
+
+.salma-page #mission-salma {
+width: auto;
+max-width: none;
+margin: 0;
+padding: 55px 20px;
+border: none;
+border-radius: 12px;
+background-color: #f0f7fc;
+box-shadow: none;
+text-align: center;
+}
+
+.salma-page #mission-salma h2 {
+margin: 0 0 20px;
+color: #333;
+text-align: center;
+}
+
+.salma-page #mission-salma p {
+max-width: 1100px;
+margin: 0 auto 25px;
+color: #333;
+line-height: 1.8;
+}
+
+.salma-page #leaders-section-salma {
+margin: 0;
+padding: 35px 20px;
+border: none;
+border-radius: 12px;
+background-color: #d3e7f5;
+box-shadow: none;
+text-align: center;
+}
+
+.salma-page #leaders-section-salma h2 {
+margin: 0 0 20px;
+color: #333;
+text-align: center;
+}
+
+.salma-page #instructors-list-salma {
+display: flex;
+flex-wrap: nowrap;
+justify-content: flex-start;
+gap: 24px;
+width: 90%;
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 0 15px;
+list-style-type: none;
+overflow-x: auto;
+}
+
+.salma-page #instructors-list-salma li {
+flex: 0 0 30%;
+min-width: 180px;
+margin: 0;
+padding: 0;
+border: none;
+border-radius: 7px;
+background-color: transparent;
+box-shadow: none;
+text-align: center;
+box-sizing: border-box;
+}
+
+.salma-page #instructors-list-salma img {
+display: block;
+width: 200px;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+border: none;
+border-radius: 7px;
+box-sizing: border-box;
+}
+
+.salma-page #instructors-list-salma a {
+display: block;
+margin-top: 15px;
+color: #173b63;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+text-decoration: underline;
+}
+
+.salma-page #instructors-list-salma a:hover {
+color: #285e8e;
+}
+
+.salma-page #join-team-salma {
+width: 60%;
+max-width: 850px;
+margin: 30px auto;
+padding: 28px;
+border: 1px solid #6499c5;
+border-radius: 12px;
+background-color: white;
+box-shadow: none;
+text-align: left;
+box-sizing: border-box;
+}
+
+.salma-page #join-team-salma h2 {
+margin: 0 0 10px;
+color: #173b63;
+text-align: center;
+}
+
+.salma-page #join-team-salma p {
+margin: 0 0 30px;
+color: #285e8e;
+font-size: 16px;
+line-height: 1.6;
+text-align: center;
+}
+
+.salma-page #join-team-salma form {
+margin: 0;
+padding: 0;
+}
+
+.salma-page #join-team-salma .form-row-salma {
+display: flex;
+justify-content: space-between;
+gap: 20px;
+}
+
+.salma-page #join-team-salma .form-field-salma {
+width: 48%;
+min-width: 0;
+margin-bottom: 22px;
+}
+
+.salma-page #join-team-salma .full-field-salma {
+width: 100%;
+margin-bottom: 22px;
+}
+
+.salma-page #join-team-salma label {
+display: block;
+margin: 0 0 8px;
+color: #173b63;
+font-size: 14px;
+font-weight: bold;
+text-align: left;
+}
+
+.salma-page #join-team-salma .required-salma {
+color: #d93025;
+}
+
+.salma-page #join-team-salma input,
+.salma-page #join-team-salma select {
+display: block;
+width: 100%;
+min-height: 44px;
+margin: 0;
+padding: 12px;
+border: 1px solid #6499c5;
+border-radius: 7px;
+background-color: white;
+color: #173b63;
+font-family: Arial, sans-serif;
+font-size: 14px;
+box-shadow: none;
+box-sizing: border-box;
+}
+
+.salma-page #join-team-salma #photograph-salma {
+padding: 9px;
+}
+
+.salma-page #join-team-salma #submit-application-salma {
+display: block;
+width: 88%;
+margin: 25px auto 12px;
+padding: 13px;
+border: none;
+border-radius: 7px;
+background-color: #285e8e;
+color: white;
+font-size: 15px;
+font-weight: normal;
+cursor: pointer;
+}
+
+.salma-page #join-team-salma #submit-application-salma:hover {
+background-color: #6499c5;
+}
+
+.salma-page .back-link {
+margin: 60px 10% 40px;
+color: #173b63;
+font-size: 16px;
+font-weight: bold;
+text-align: left;
+}
+
+.salma-page .back-link a {
+color: #173b63;
+text-decoration: underline;
+}
+
+.salma-page .back-link a:hover {
+color: #285e8e;
+}
+
+.salma-page .instructor-profile-h1-salma {
+margin: 0 20px 30px;
+color: #173b63;
+font-size: 28px;
+text-align: center;
+}
+
+.salma-page .profile-table-salma {
+width: 80%;
+max-width: 1000px;
+margin: 0 auto 70px;
+border: 1px solid #6499c5;
+border-radius: 12px;
+border-collapse: collapse;
+background-color: white;
+box-shadow: none;
+}
+
+.salma-page .profile-table-salma th,
+.salma-page .profile-table-salma td {
+padding: 18px 16px;
+border: 1px solid #6499c5;
+color: #333;
+font-size: 16px;
+line-height: 1.5;
+text-align: left;
+vertical-align: middle;
+overflow-wrap: anywhere;
+}
+
+.salma-page .profile-table-salma thead th {
+padding: 22px 24px;
+background-color: #d3e7f5;
+color: #173b63;
+font-size: 26px;
+text-align: left;
+}
+
+.salma-page .profile-table-salma tbody th {
+width: 31%;
+background-color: #f0f7fc;
+color: #173b63;
+font-weight: bold;
+}
+
+.salma-page .profile-table-salma td img {
+display: block;
+width: 180px;
+max-width: 100%;
+height: auto;
+border: none;
+border-radius: 7px;
+box-sizing: border-box;
+}
+
+.salma-page .profile-table-salma ul {
+margin: 0;
+padding-left: 18px;
+}
+
+.salma-page .profile-table-salma .bold-salma {
+font-weight: bold;
+}
+
+
+@media screen and (max-width: 700px) {
+.salma-page #join-team-salma {
+width: 90%;
+padding: 20px;
+}
+
+.salma-page #join-team-salma .form-row-salma {
+flex-direction: column;
+gap: 0;
+}
+
+.salma-page #join-team-salma .form-field-salma {
+width: 100%;
+}
+
+.salma-page #instructors-list-salma img {
+width: 160px;
+}
+
+.salma-page .back-link {
+margin: 35px 5%;
+}
+
+.salma-page .profile-table-salma {
+width: 90%;
+margin-bottom: 40px;
+}
+
+.salma-page .profile-table-salma th,
+.salma-page .profile-table-salma td {
+padding: 12px 8px;
+font-size: 14px;
+}
+
+.salma-page .profile-table-salma thead th {
+padding: 18px;
+font-size: 23px;
+}
+
+.salma-page .profile-table-salma td img {
+width: 150px;
+}
+}
+
+.evaluation-section .evaluation-heading {
+    background-color: #f0f7fc;
+    padding: 15px 18px;
+    margin: -28px -28px 25px;
+    border-bottom: 1px solid #6499c5;
+    border-radius: 12px 12px 0 0;
+    text-align: left;
+}
+.evaluation-section .required-star {
+    color: #d93025;
+}
+
+.evaluation-section .evaluation-heading h3 {
+    color: #173b63;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+/* ========== JOUD: MANAGER DASHBOARD AND ADD OFFERING ========== */
+
+
+/* Page title */
+
+.joud-manager-page .manager-title-joud {
+    padding: 35px 20px;
+    background-color: #f0f7fc;
+    border-bottom: 1px solid #6499c5;
+}
+
+.joud-manager-page .manager-title-joud h1 {
+    margin: 0;
+    color: #173b63;
+    font-size: 28px;
+}
+
+
+/* Manager offerings section */
+
+.joud-manager-page .manager-offerings-joud {
+    padding: 35px 20px;
+    background-color: #d3e7f5;
+}
+
+.joud-manager-page .manager-content-joud {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.joud-manager-page .manager-content-joud h2 {
+    margin: 0 12px 30px;
+    color: #173b63;
+    text-align: left;
+}
+
+
+/* Flexbox container */
+
+.joud-manager-page .manager-cards-joud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Offering cards */
+
+.joud-manager-page .manager-card-joud {
+    width: 28%;
+    margin: 12px 12px 30px;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #6499c5;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.joud-manager-page .manager-card-joud img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.joud-manager-page .manager-card-joud h3 {
+    margin: 12px 0 8px;
+    color: #173b63;
+    font-size: 15px;
+}
+
+.joud-manager-page .manager-card-joud p {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Management links */
+
+.joud-manager-page .manager-actions-joud {
+    padding: 45px 20px 60px;
+    background-color: #f0f7fc;
+}
+
+.joud-manager-page .manager-action-list-joud {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 960px;
+    width: 90%;
+    margin: auto;
+}
+
+.joud-manager-page .manager-action-list-joud a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background-color: #285e8e;
+    color: white;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+}
+
+.joud-manager-page .manager-action-list-joud a:hover {
+    background-color: #6499c5;
+}
+
+
+/* Add offering section */
+
+.joud-manager-page .add-offering-section-joud {
+    padding: 35px 20px 90px;
+    background-color: #d3e7f5;
+    border-radius: 12px;
+}
+
+.joud-manager-page .add-offering-form-joud {
+    max-width: 700px;
+    width: 75%;
+    margin: auto;
+    text-align: left;
+}
+
+
+/* Image selection area */
+
+.joud-manager-page .offering-upload-joud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.joud-manager-page .offering-image-space-joud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 180px;
+    max-width: 100%;
+    margin-bottom: 12px;
+    border: 1px solid #6499c5;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.joud-manager-page .offering-upload-joud input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #173b63;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+/* Hide the native button and keep the filename visible */
+
+.joud-manager-page .offering-upload-joud input::file-selector-button {
+    display: none;
+}
+
+.joud-manager-page .offering-upload-joud label {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #285e8e;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.joud-manager-page .offering-upload-joud label:hover {
+    background-color: #6499c5;
+}
+
+
+/* Form fields */
+
+.joud-manager-page .offering-field-joud {
+    margin-bottom: 18px;
+}
+
+.joud-manager-page .offering-field-joud label {
+    display: block;
+    margin-bottom: 8px;
+    color: #173b63;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.joud-manager-page .offering-field-joud input,
+.joud-manager-page .offering-field-joud textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #6499c5;
+    border-radius: 7px;
+    background-color: white;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Required stars */
+
+.joud-manager-page .required-joud {
+    color: #d93025;
+}
+
+
+/* Submit button */
+
+.joud-manager-page .offering-submit-joud {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #285e8e;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.joud-manager-page .offering-submit-joud:hover {
+    background-color: #6499c5;
+}
+
+
+/* Dashboard footer */
+
+.joud-dashboard footer {
+    background-color: #d3e7f5;
+}
+
+
+/* Small screens */
+
+@media screen and (max-width: 600px) {
+
+    .joud-manager-page .manager-cards-joud {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .joud-manager-page .manager-card-joud {
+        width: 85%;
+    }
+
+    .joud-manager-page .add-offering-form-joud {
+        width: 90%;
+    }
+
+}
+
+/* Phase 3 - Home Responsive Design */
+
+/* Responsive images */
+
+.home-page img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive layout for small screens */
+
+@media screen and (max-width: 600px) {
+
+    .home-page .navigation {
+        justify-content: center;
+    }
+
+    .home-page .navigation a {
+        margin: 8px;
+    }
+
+    .home-page .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home-page .footer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+/* Back to Top Button */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #285e8e;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* Real-time Clock */
+
+#liveClock {
+    text-align: center;
+    font-size: 14px;
+    color: #173B63;
+}
+
+/* Switch Theme Button */
+
+.home-page header {
+    position: relative;
+}
+
+
+#themeButton {
+    background-color: #285e8e;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    #themeButton {
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+.destination-extra {
+    display: none;
+}
+
+.destination-card button {
+    background-color: #285e8e;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Home Layout Update */
+
+.home-page .welcome {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+/* About Us and Instructor Profile on small screens */
+@media screen and (max-width: 700px) {
+    .salma-page .header-content .logo,
+    .salma-page .footer-content .logo {
+        width: 60px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .salma-page .navigation {
+        justify-content: center;
+        gap: 4px 8px;
+    }
+
+    .salma-page .navigation a {
+        flex: 0 1 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-height: 44px;
+        margin: 0;
+        padding: 6px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .salma-page .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .salma-page .contact {
+        max-width: 100%;
+        margin: 10px 0 0;
+        overflow-wrap: anywhere;
+    }
+
+    .salma-page #join-team-salma {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .salma-page #join-team-salma .form-row-salma {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .salma-page #join-team-salma .form-field-salma {
+        width: 100%;
+    }
+
+    .salma-page #join-team-salma #submit-application-salma {
+        width: 100%;
+    }
+
+    .salma-page #instructors-list-salma img {
+        width: 160px;
+    }
+
+    .salma-page .back-link {
+        margin: 35px 5%;
+    }
+
+    .salma-page .profile-table-salma {
+        width: 90%;
+        table-layout: fixed;
+        margin-bottom: 40px;
+    }
+
+    .salma-page .profile-table-salma th,
+    .salma-page .profile-table-salma td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .salma-page .profile-table-salma thead th {
+        padding: 14px 10px;
+        font-size: 22px;
+    }
+
+    .salma-page .profile-table-salma td img {
+        width: 150px;
+    }
+}
+
+/* Dark mode overrides for the existing project styles */
+html[data-theme="dark"] body {
+    color: var(--theme-text, #333);
+    background-color: var(--theme-base, white);
+}
+
+html[data-theme="dark"] header {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .navigation {
+    background-color: var(--theme-nav, #173B63);
+}
+
+html[data-theme="dark"] .navigation a:hover {
+    color: var(--theme-accent, #6499c5);
+}
+
+html[data-theme="dark"] .welcome {
+    background-color: var(--theme-base, #f0f7fc);
+}
+
+html[data-theme="dark"] .button {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .button:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .experiences {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .card {
+    background-color: var(--theme-surface, white);
+    border: 2px solid var(--theme-border, #6499C5);
+}
+
+html[data-theme="dark"] .card:hover {
+    background-color: var(--theme-hover, #b8d8ee);
+}
+
+html[data-theme="dark"] .destinations {
+    background-color: var(--theme-base, #f0f7fc);
+}
+
+html[data-theme="dark"] .destination-card {
+    background-color: var(--theme-surface, white);
+    border: 2px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .reviews {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .review {
+    background-color: var(--theme-surface, white);
+    border: 2px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .stars {
+    color: var(--theme-warning, #a97700);
+}
+
+html[data-theme="dark"] footer {
+    background-color: var(--theme-base, #f0f7fc);
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] .mailLink {
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] .mailLink:hover {
+    color: var(--theme-accent, #6499c5);
+}
+
+html[data-theme="dark"] .offerings-intro {
+    background-color: var(--theme-base, #F0F7FC);
+}
+
+html[data-theme="dark"] .offerings-intro h1 {
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] .offerings-intro p {
+    color: var(--theme-accent, #285E8E);
+}
+
+html[data-theme="dark"] .filters {
+    background-color: var(--theme-section, #D3E7F5);
+}
+
+html[data-theme="dark"] .filter-box label {
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] .filter-box select {
+    color: var(--theme-text, #173B63);
+    background-color: var(--theme-surface, white);
+    border: 2px solid var(--theme-border, #6499C5);
+}
+
+html[data-theme="dark"] .all-offerings {
+    background-color: var(--theme-section, #D3E7F5);
+}
+
+html[data-theme="dark"] .offering-card {
+    background-color: var(--theme-surface, white);
+    border: 2px solid var(--theme-border, #6499C5);
+}
+
+html[data-theme="dark"] .offering-card h3 {
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] .offering-card p {
+    color: var(--theme-text, #333333);
+}
+
+html[data-theme="dark"] .offering-card .price {
+    color: var(--theme-accent, #285E8E);
+}
+
+html[data-theme="dark"] .offering-card:hover {
+    background-color: var(--theme-base, #F0F7FC);
+}
+
+html[data-theme="dark"] .recommendations {
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .recommendations h2 {
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] .leaders-section {
+    background-color: var(--theme-base, #f0f7fc);
+}
+
+html[data-theme="dark"] .leaders-section button {
+    background-color: var(--theme-button, #163a63);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .add-leader-section {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .leaders-back-link {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .add-leader-section form {
+    background-color: var(--theme-surface, white);
+    border: 1px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .add-leader-section label {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .add-leader-section input,
+html[data-theme="dark"] .add-leader-section select {
+    border: 1px solid var(--theme-border, #cccccc);
+}
+
+html[data-theme="dark"] .add-leader-section button {
+    background-color: var(--theme-button, #163a63);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .evaluation-section {
+    background-color: var(--theme-base, #f0f7fc);
+}
+
+html[data-theme="dark"] .evaluation-section form {
+    background-color: var(--theme-surface, white);
+    border: 1px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .evaluation-section h3 {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .evaluation-section form > label {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .join_form select,
+html[data-theme="dark"] .join_form textarea {
+    border: 1px solid var(--theme-border, #cccccc);
+}
+
+html[data-theme="dark"] .evaluation-section .rating-title {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .join_form .star-rating label {
+    color: var(--theme-muted, #bdbdbd);
+}
+
+html[data-theme="dark"] .join_form .star-rating label:hover,
+html[data-theme="dark"] .join_form .star-rating label:hover ~ label,
+html[data-theme="dark"] .join_form .star-rating input:checked ~ label {
+    color: var(--theme-text, #163a63);
+}
+
+html[data-theme="dark"] .join_form .rating-note {
+    color: var(--theme-muted, #666666);
+}
+
+html[data-theme="dark"] .evaluation-section button {
+    background-color: var(--theme-button, #163a63);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .evaluation-section .back-link a {
+    color: var(--theme-text, #163a63);
+}
+
+html[data-theme="dark"] .evaluation-footer {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] section.requests {
+    background-color: var(--theme-base, #F0F7FC);
+}
+
+html[data-theme="dark"] .request_card {
+    background-color: var(--theme-surface, white);
+    border: 2px solid var(--theme-border, #6499C5);
+}
+
+html[data-theme="dark"] .request_info {
+    border: 2px solid var(--theme-border, #e1e8e8);
+    background-color: var(--theme-section, #f5f8f6);
+}
+
+html[data-theme="dark"] .pending {
+    color: var(--theme-warning, #926600);
+    border: 2px solid var(--theme-border, #fbecb8);
+    background-color: var(--theme-warning-bg, #fff3cd);
+}
+
+html[data-theme="dark"] .declined {
+    color: var(--theme-error, #b42318);
+    border: 2px solid var(--theme-border, #ffdedc);
+    background-color: var(--theme-error-bg, #fde8e7);
+}
+
+html[data-theme="dark"] .completed {
+    color: var(--theme-success, #237547);
+    border: 2px solid var(--theme-border, #c8e3cf);
+    background-color: var(--theme-success-bg, #e1f3e6);
+}
+
+html[data-theme="dark"] section.completed_section {
+    background-color: var(--theme-section, #D3E7F5);
+}
+
+html[data-theme="dark"] .explore_engage_content {
+    border: 2px solid var(--theme-border, #6499C5);
+    background-color: var(--theme-surface, #fbfdfc);
+}
+
+html[data-theme="dark"] .explore_engage_link a:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .explore_engage_link a {
+    border: 1px solid var(--theme-border, #285e8e);
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] section.travel_section {
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .saved_card {
+    border: 2px solid var(--theme-border, #6499C5);
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .saved_card:hover {
+    background-color: var(--theme-base, #F0F7FC);
+}
+
+html[data-theme="dark"] .request_form_page {
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .form_intro h2 {
+    color: var(--theme-text, #123f5b);
+}
+
+html[data-theme="dark"] .form_intro p {
+    color: var(--theme-text, #123f5b);
+}
+
+html[data-theme="dark"] .form_section {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .form_heading {
+    border-bottom: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-base, #F0F7FC);
+}
+
+html[data-theme="dark"] .form_heading h3 {
+    color: var(--theme-text, #123f5b);
+}
+
+html[data-theme="dark"] .join_form label {
+    color: var(--theme-text, #123f5b);
+}
+
+html[data-theme="dark"] .join_form label span {
+    color: var(--theme-error, #d93025);
+}
+
+html[data-theme="dark"] .join_form select,
+html[data-theme="dark"] .join_form input[type="text"],
+html[data-theme="dark"] .join_form input[type="date"] {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+    color: var(--theme-text, #123f5b);
+}
+
+html[data-theme="dark"] .submit_request {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .submit_request:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .back_link a {
+    color: var(--theme-text, #123f5b);
+}
+
+html[data-theme="dark"] .back_link a:hover {
+    color: var(--theme-accent, #6499c5);
+}
+
+html[data-theme="dark"] .submitted_request {
+    background-color: var(--theme-surface, #F0F7FC);
+    border: 1px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .submitted_request h3 {
+    color: var(--theme-accent, #3f5f8b);
+}
+
+html[data-theme="dark"] .submitted_request p {
+    color: var(--theme-text, #333);
+}
+
+html[data-theme="dark"] .submitted_request strong {
+    color: var(--theme-accent, #3f5f8b);
+}
+
+html[data-theme="dark"] body.salma-page {
+    color: var(--theme-text, #333);
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .salma-page #mission-salma {
+    background-color: var(--theme-base, #f0f7fc);
+}
+
+html[data-theme="dark"] .salma-page #mission-salma h2 {
+    color: var(--theme-text, #333);
+}
+
+html[data-theme="dark"] .salma-page #mission-salma p {
+    color: var(--theme-text, #333);
+}
+
+html[data-theme="dark"] .salma-page #leaders-section-salma {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .salma-page #leaders-section-salma h2 {
+    color: var(--theme-text, #333);
+}
+
+html[data-theme="dark"] .salma-page #instructors-list-salma a {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page #instructors-list-salma a:hover {
+    color: var(--theme-accent, #285e8e);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma h2 {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma p {
+    color: var(--theme-accent, #285e8e);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma label {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma .required-salma {
+    color: var(--theme-error, #d93025);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma input,
+html[data-theme="dark"] .salma-page #join-team-salma select {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma #submit-application-salma {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .salma-page #join-team-salma #submit-application-salma:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .salma-page .back-link {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page .back-link a {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page .back-link a:hover {
+    color: var(--theme-accent, #285e8e);
+}
+
+html[data-theme="dark"] .salma-page .instructor-profile-h1-salma {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page .profile-table-salma {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .salma-page .profile-table-salma th,
+html[data-theme="dark"] .salma-page .profile-table-salma td {
+    border: 1px solid var(--theme-border, #6499c5);
+    color: var(--theme-text, #333);
+}
+
+html[data-theme="dark"] .salma-page .profile-table-salma thead th {
+    background-color: var(--theme-section, #d3e7f5);
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .salma-page .profile-table-salma tbody th {
+    background-color: var(--theme-base, #f0f7fc);
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .evaluation-section .evaluation-heading {
+    background-color: var(--theme-base, #f0f7fc);
+    border-bottom: 1px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .evaluation-section .required-star {
+    color: var(--theme-error, #d93025);
+}
+
+html[data-theme="dark"] .evaluation-section .evaluation-heading h3 {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-title-joud {
+    background-color: var(--theme-base, #f0f7fc);
+    border-bottom: 1px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-title-joud h1 {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-offerings-joud {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-content-joud h2 {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-card-joud {
+    background-color: var(--theme-surface, white);
+    border: 1px solid var(--theme-border, #6499c5);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-card-joud h3 {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-actions-joud {
+    background-color: var(--theme-base, #f0f7fc);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-action-list-joud a {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .joud-manager-page .manager-action-list-joud a:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .joud-manager-page .add-offering-section-joud {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-image-space-joud {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-upload-joud input {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-upload-joud label {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-upload-joud label:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-field-joud label {
+    color: var(--theme-text, #173b63);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-field-joud input,
+html[data-theme="dark"] .joud-manager-page .offering-field-joud textarea {
+    border: 1px solid var(--theme-border, #6499c5);
+    background-color: var(--theme-surface, white);
+    color: var(--theme-text, #333);
+}
+
+html[data-theme="dark"] .joud-manager-page .required-joud {
+    color: var(--theme-error, #d93025);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-submit-joud {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .joud-manager-page .offering-submit-joud:hover {
+    background-color: var(--theme-button-hover, #6499c5);
+}
+
+html[data-theme="dark"] .joud-dashboard footer {
+    background-color: var(--theme-section, #d3e7f5);
+}
+
+html[data-theme="dark"] #backToTop {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] #liveClock {
+    color: var(--theme-text, #173B63);
+}
+
+html[data-theme="dark"] #themeButton {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+html[data-theme="dark"] .destination-card button {
+    background-color: var(--theme-button, #285e8e);
+    color: var(--theme-button-text, white);
+}
+
+/* Shared theme colors */
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --theme-base: #101827;
+    --theme-section: #182337;
+    --theme-surface: #22314A;
+    --theme-nav: #0C1422;
+    --theme-text: #EEF4FF;
+    --theme-muted: #C5D3E7;
+    --theme-accent: #A6CCFF;
+    --theme-border: #456083;
+    --theme-hover: #304563;
+    --theme-button: #A6CCFF;
+    --theme-button-hover: #C1DBFF;
+    --theme-button-text: #101827;
+    --theme-warning: #FFD582;
+    --theme-warning-bg: #402F19;
+    --theme-error: #FFB7B3;
+    --theme-error-bg: #45252D;
+    --theme-success: #A9E4B6;
+    --theme-success-bg: #203A32;
+}
+
+#themeButton:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+html[data-theme="dark"] :is(input:not([type="submit"], [type="button"]), select, textarea) {
+    background-color: var(--theme-base);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+html[data-theme="dark"] a {
+    color: var(--theme-accent);
+}
+
+html[data-theme="dark"] .navigation a {
+    color: #FFFFFF;
+}
+
+html[data-theme="dark"] .navigation a:hover {
+    color: var(--theme-accent);
+}
+
+html[data-theme="dark"] a.button {
+    color: var(--theme-button-text);
+}
+@media screen and (max-width: 600px) {
+    .reema-page .navigation {
+        justify-content: center;
+    }
+
+    .reema-page .navigation a {
+        margin: 8px;
+    }
+
+    .reema-page .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

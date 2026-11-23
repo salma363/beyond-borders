@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request to Join an Offering</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body class="request-join-page">
+
+<!-- Website Header -->
+<header>
+    <div class="header-content">
+        <img src="images/logo.png"
+             alt="Beyond Borders Logo"
+             class="logo">
+        <div>
+            <h2>Beyond Borders</h2>
+            <p>Culture &amp; Experience Club</p>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav class="navigation">
+    <a href="home.html">Home</a>
+    <a href="offerings.html">Club Offerings</a>
+    <a href="about-us.html">About Us</a>
+    <a href="member_dashboard.html">Member Dashboard</a>
+    <a href="manager-dashboard.html">Manager Dashboard</a>
+</nav>
+
+    <main class="request_form_page">
+
+        <div class="request_content_container">
+
+        <!-- Hero Image -->
+        <section class="form_hero">
+            <img src="images/countries.png"
+                alt="Japanese cultural experience">
+        </section>
+
+        <!-- Form Introduction -->
+        <div class="form_intro">
+            <h2>Request to Join an Offering</h2>
+            <p>Take the next step in your cultural journey.</p>
+        </div>
+
+        <!-- Request Form -->
+        <section class="form_section">
+
+            <div class="form_heading">
+                <h3>Request Details</h3>
+            </div>
+
+            <form id="joinForm" class="join_form" action="#" method="post">
+
+                <label for="offering">Select an Offering <span>*</span></label>
+
+                <select id="offering" name="offering">
+                    <option value="">Select an offering</option>
+                    <option value="italian_pasta">Italian Pasta Workshop</option>
+                    <option value="sushi">Sushi Making Workshop</option>
+                    <option value="french_basics">French Basics Workshop</option>
+                    <option value="french_pottery">French Pottery Experience</option>     
+                    <option value="lemon_village">Italian Lemon Village Experience</option>     
+                    <option value="matcha">Matcha & Japanese Tea Workshop</option>                        
+                </select>
+
+                <label for="full_name">Member Full Name <span>*</span></label>
+
+                <input type="text" id="full_name" name="full_name" placeholder="Enter your full name">
+
+                <label for="preferred_date">Preferred Date <span>*</span></label>
+
+                <input type="date" id="preferred_date" name="preferred_date">
+
+                <input class="submit_request" type="submit" value="Submit Request">
+
+            </form>
+
+            <div class="back_link">
+                <a href="member_dashboard.html">&larr; Back to Member Dashboard</a>
+            </div>
+
+            <!-- Submitted requests will be displayed here -->
+            <div id="submittedRequests" class="submitted_requests"></div>
+
+        </section>
+        </div>
+
+    </main>
+
+<!-- Website Footer -->
+<footer>
+    <div class="footer-content">
+        <img src="images/logo.png"
+             alt="Beyond Borders Logo"
+             class="logo">
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>
+                <a class="mailLink" href="mailto:Info@BeyoundBorders.com ">Info@BeyoundBorders.com</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &copy; 2026 Beyond Borders.
+                All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="request_to_join.js"></script>
+</body>
+
+</html>

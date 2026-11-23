@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Activity Leaders | Beyond Borders</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+<body class="reema-page">
+<header>
+    <div class="header-content">
+        <img src="images/logo.png"
+             alt="Beyond Borders Logo"
+             class="logo">
+
+        <div>
+            <h2>Beyond Borders</h2>
+            <p>Culture & Experience Club</p>
+        </div>
+    </div>
+</header>
+
+<nav class="navigation">
+    <a href="home.html">Home</a>
+    <a href="offerings.html">Club Offerings</a>
+    <a href="about-us.html">About Us</a>
+    <a href="member_dashboard.html">Member Dashboard</a>
+    <a href="manager-dashboard.html">Manager Dashboard</a>
+</nav>
+
+<main>
+
+    <section class="leaders-section">
+
+        <h2>Current Activity Leaders & Instructors</h2>
+
+<form id="deleteLeaderForm" action="#" method="get">
+            <div class="leaders-container">
+
+                <div class="leader-card">
+                    <img src="images/camille-laurent.png"
+                         alt="Camille Laurent">
+                    <br>
+                    <label>
+                        <input type="checkbox" name="leader"
+                               value="camille">
+                        Camille Laurent
+                    </label>
+                </div>
+
+                <div class="leader-card">
+                    <img src="images/matteo-romano.png"
+                         alt="Matteo Romano">
+                    <br>
+                    <label>
+                        <input type="checkbox" name="leader"
+                               value="matteo">
+                        Matteo Romano
+                    </label>
+                </div>
+
+                <div class="leader-card">
+                    <img src="images/luca-moretti.png"
+                         alt="Luca Moretti">
+                    <br>
+                    <label>
+                        <input type="checkbox" name="leader"
+                               value="luca">
+                        Luca Moretti
+                    </label>
+                </div>
+
+                <div class="leader-card">
+                    <img src="images/haruto-nakamura.png"
+                         alt="Haruto Nakamura">
+                    <br>
+                    <label>
+                        <input type="checkbox" name="leader"
+                               value="haruto">
+                        Haruto Nakamura
+                    </label>
+                </div>
+
+            </div>
+
+            <button type="submit">Delete Selected</button>
+
+        </form>
+
+    </section>
+	
+<section class="add-leader-section">
+<form id="addLeaderForm"  action="#" method="post" novalidate>
+        <h2>Add New Activity Leader or Instructor</h2>
+        <p>Enter the details below to add a new team member.</p>
+
+        <!-- First row -->
+<div class="form-row">
+<div class="form-field">
+<label for="leader-name">Full Name </label>
+<input type="text" id="leader-name"
+name="name" placeholder="Enter full name"
+required>
+</div>
+<div class="form-field">
+<label for="leader-email">Email Address </label>
+<input type="email" id="leader-email"
+name="email" placeholder="name@example.com"
+required>
+</div>
+</div>
+<!-- Second row -->
+<div class="form-row">
+<div class="form-field">
+<label for="leader-dob">Date of Birth </label>
+<input type="date" id="leader-dob"
+name="dob" required>
+</div>
+<div class="form-field">
+<label for="leader-photo">Photo </label>
+<input type="file" id="leader-photo"
+name="photo" required>
+</div>
+</div>
+<!-- Role -->
+<label for="leader-role">Role </label>
+<select id="leader-role" name="role" required>
+<option value="">Select Role</option>
+<option value="leader">Activity Leader</option>
+<option value="instructor">Instructor</option>
+</select>
+<!-- Area of Expertise -->
+<label for="leader-expertise">Area of Expertise </label>
+<select id="leader-expertise" name="expertise" required>
+<option value="">Select Area of Expertise</option>
+<option value="language">Language</option>
+<option value="cooking">Cooking</option>
+<option value="arts">Arts & Culture</option>
+</select>
+<!-- Skills -->
+<label for="leader-skills">Skills </label>
+<input type="text" id="leader-skills"
+name="skills"
+placeholder="List key skills, separated by commas"
+required>
+<!-- Education -->
+<label for="leader-education">Education </label>
+<input type="text" id="leader-education"
+name="education"
+placeholder="Enter educational background"
+required>
+<button type="submit">
+Add Activity Leader / Instructor
+</button>
+</form>
+</section>
+</main>
+
+
+<footer>
+    <div class="footer-content">
+
+        <img src="images/logo.png"
+             alt="Beyond Borders Logo"
+             class="logo">
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>
+                <a class="mailLink" href="mailto:Info@BeyoundBorders.com ">Info@BeyoundBorders.com</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &copy; 2026 Beyond Borders.
+                All rights reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+<script src="manage_leaders.js"></script>
+</body>
+</html>

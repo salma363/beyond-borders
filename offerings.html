@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- adjusts the page to the screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title shown in the browser tab -->
+    <title>Beyond Borders - Club Offerings</title>
+
+    <!-- connects this page to the shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="theme.js"></script>
+</head>
+
+<body>
+
+    <!-- displays the club logo and website name -->
+    <header>
+        <div class="header-content">
+
+            <img src="images/logo.png"
+                 alt="Beyond Borders Logo"
+                 class="logo">
+
+            <div>
+                <h2>Beyond Borders</h2>
+                <p>Culture & Experience Club</p>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- links to the main pages of the website -->
+    <!-- flexbox aligns links to the right in CSS -->
+
+    <nav class="navigation">
+
+        <a href="home.html">Home</a>
+        <a href="offerings.html">Club Offerings</a>
+        <a href="about-us.html">About Us</a>
+        <a href="member_dashboard.html">Member Dashboard</a>
+        <a href="manager-dashboard.html">Manager Dashboard</a>
+
+    </nav>
+
+
+    <main>
+
+        <section class="offerings-intro">
+
+            <h1>Explore Our Experiences</h1>
+
+            <p>
+                Discover cultures around the world
+                through our<br>
+                workshops and activities
+            </p>
+
+        </section>
+
+
+ 
+        <!-- contains two drop-down lists -->
+
+        <section class="filters">
+
+            <!-- flexbox arranges the two lists in one row -->
+            <div class="filter-container">
+
+                <!-- select creates a drop-down list -->
+                <!-- optgroup groups related options -->
+
+                <div class="filter-box">
+
+                    <label for="sort">Sort By</label>
+
+                    <select id="sort" name="sort">
+
+                        <option value="">
+                            Sort By
+                        </option>
+
+                        <optgroup label="Price">
+
+                            <option value="low-high">
+                                Price: Low to High
+                            </option>
+
+                            <option value="high-low">
+                                Price: High to Low
+                            </option>
+
+                        </optgroup>
+
+                        <optgroup label="Name">
+
+                            <option value="az">
+                                Name: A-Z
+                            </option>
+
+                            <option value="za">
+                                Name: Z-A
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                </div>
+
+
+                <!-- allows users to select a country -->
+
+                <div class="filter-box">
+
+                    <label for="country">Category</label>
+
+                    <select id="country" name="country">
+
+                        <option value="all">
+                            All Countries
+                        </option>
+
+                        <option value="france">
+                            France
+                        </option>
+
+                        <option value="italy">
+                            Italy
+                        </option>
+
+                        <option value="japan">
+                            Japan
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- displays six available workshops -->
+        <!-- flexbox arranges the cards in rows -->
+
+        <section class="all-offerings">
+
+<div class="offering-cards">
+
+    <!-- French Basics Workshop -->
+    <div class="offering-card"
+         data-name="French Basics Workshop"
+         data-price="80"
+         data-image="images/frenchBasics.png"
+         data-country="France">
+
+        <img src="images/frenchBasics.png" alt="French Basics Workshop">
+        <h3>French Basics Workshop</h3>
+
+        <p>Learn everyday French phrases and expressions.</p>
+        <p>Instructor: Camille Laurent</p>
+
+        <p class="price">80 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+
+    <!-- Italian Pasta Workshop -->
+    <div class="offering-card"
+         data-name="Italian Pasta Workshop"
+         data-price="100"
+         data-image="images/italianPasta.png"
+         data-country="Italy">
+
+        <img src="images/italianPasta.png" alt="Italian Pasta Workshop">
+        <h3>Italian Pasta Workshop</h3>
+
+        <p>Discover the art of making fresh Italian pasta.</p>
+        <p>Instructor: Matteo Romano</p>
+
+        <p class="price">100 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+
+    <!-- Sushi Making Workshop -->
+    <div class="offering-card"
+         data-name="Sushi Making Workshop"
+         data-price="120"
+         data-image="images/sushi.png"
+         data-country="Japan">
+
+        <img src="images/sushi.png" alt="Sushi Making Workshop">
+        <h3>Sushi Making Workshop</h3>
+
+        <p>Learn to prepare traditional Japanese sushi.</p>
+        <p>Instructor: Haruto Nakamura</p>
+
+        <p class="price">120 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+
+    <!-- French Pottery Experience -->
+    <div class="offering-card"
+         data-name="French Pottery Experience"
+         data-price="115"
+         data-image="images/frenchPottery.png"
+         data-country="France">
+
+        <img src="images/frenchPottery.png" alt="French Pottery Experience">
+        <h3>French Pottery Experience</h3>
+
+        <p>Create your own pottery piece inspired by French art.</p>
+        <p>Instructor: Camille Laurent</p>
+
+        <p class="price">115 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+
+    <!-- Italian Lemon Village Experience -->
+    <div class="offering-card"
+         data-name="Italian Lemon Village Experience"
+         data-price="145"
+         data-image="images/italianLemon.png"
+         data-country="Italy">
+
+        <img src="images/italianLemon.png" alt="Italian Lemon Village Experience">
+        <h3>Italian Lemon Village Experience</h3>
+
+        <p>Discover Italian traditions through a fun lemon-themed workshop.</p>
+        <p>Instructor: Luca Moretti</p>
+
+        <p class="price">145 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+
+    <!-- Matcha and Japanese Tea Workshop -->
+    <div class="offering-card"
+         data-name="Matcha & Japanese Tea Workshop"
+         data-price="90"
+         data-image="images/japaneseMatcha.png"
+         data-country="Japan">
+
+        <img src="images/japaneseMatcha.png" alt="Matcha and Japanese Tea Workshop">
+        <h3>Matcha &amp; Japanese Tea Workshop</h3>
+
+        <p>Learn to prepare traditional Japanese matcha and tea.</p>
+        <p>Instructor: Haruto Nakamura</p>
+
+        <p class="price">90 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+</div>
+
+        </section>
+
+
+        <!-- displays two recommended offerings -->
+
+        <section class="recommendations">
+
+            <h2>Recommended For You</h2>
+
+<div class="offering-cards">
+
+    <!-- Recommended French Pottery -->
+    <div class="offering-card"
+         data-name="French Pottery Experience"
+         data-price="115"
+         data-image="images/frenchPottery.png"
+         data-country="France">
+
+        <img src="images/frenchPottery.png" alt="French Pottery Experience">
+        <h3>French Pottery Experience</h3>
+
+        <p>Create your own pottery piece inspired by French art.</p>
+        <p>Instructor: Camille Laurent</p>
+
+        <p class="price">115 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+
+    <!-- Recommended French Basics -->
+    <div class="offering-card"
+         data-name="French Basics Workshop"
+         data-price="80"
+         data-image="images/frenchBasics.png"
+         data-country="France">
+
+        <img src="images/frenchBasics.png" alt="French Basics Workshop">
+        <h3>French Basics Workshop</h3>
+
+        <p>Learn everyday French phrases and expressions.</p>
+        <p>Instructor: Camille Laurent</p>
+
+        <p class="price">80 SAR</p>
+
+        <div class="offering-action">
+            <a href="request_to_join.html" class="button">Join Workshop</a>
+            <img src="images/bookmark-empty.png"
+                 alt="Bookmark"
+                 class="bookmark-image"
+                 data-saved="false">
+        </div>
+    </div>
+
+</div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <img src="images/logo.png"
+                 alt="Beyond Borders Logo"
+                 class="logo">
+
+
+            <div class="contact">
+
+                <h3>Contact Us</h3>
+
+                <p><a class="mailLink" href="mailto:Info@BeyoundBorders.com ">Info@BeyoundBorders.com</a> &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2026 Beyond Borders.All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+<script src="offerings.js"></script>
+<script src="member_dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offering Evaluation | Beyond Borders</title>
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body class="reema-page">
+<!-- Website Header -->
+<header>
+<div class="header-content">
+<img src="images/logo.png"
+alt="Beyond Borders Logo"
+class="logo">
+<div>
+<h2>Beyond Borders</h2>
+<p>Culture & Experience Club</p>
+</div>
+</div>
+</header>
+<!-- Navigation Bar -->
+<nav class="navigation">
+<a href="home.html">Home</a>
+<a href="offerings.html">Club Offerings</a>
+<a href="about-us.html">About Us</a>
+<a href="member_dashboard.html">Member Dashboard</a>
+<a href="manager-dashboard.html">Manager Dashboard</a>
+</nav>
+
+<main class="request_form_page">
+
+    <div class="request_content_container">
+
+        <!-- Hero Image -->
+        <section class="form_hero">
+            <img src="images/countries.png"
+                 alt="Japanese cultural experience">
+        </section>
+
+        <!-- Form Introduction -->
+        <div class="form_intro">
+            <h2>Offering Evaluation</h2>
+            <p>Your feedback helps us improve our offerings.</p>
+        </div>
+
+        <!-- Evaluation Form -->
+        <section class="form_section">
+
+            <div class="form_heading">
+                <h3>Evaluation Details</h3>
+            </div>
+
+            <form class="join_form" action="#" method="post">
+
+                <!-- Completed Offering -->
+                <label for="completed-offering">
+                    Completed Offering <span class="required-star">*</span>
+                </label>
+
+                <select id="completed-offering" name="offering" required>
+                    <option value="">Select an offering</option>
+                    <option value="french">French Basics Workshop</option>
+                    <option value="italian">Italian Pasta Workshop</option>
+                    <option value="sushi">Sushi Making Workshop</option>
+                    <option value="matcha">Matcha & Japanese Tea Workshop</option>
+                </select>
+
+                <!-- Rating -->
+                <label class="rating-title">
+                    Rating <span class="required-star">*</span>
+                </label>
+
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">&#9733;</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">&#9733;</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">&#9733;</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">&#9733;</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">&#9733;</label>
+                </div>
+
+                <p class="rating-note">Select a rating</p>
+
+                <!-- Written Feedback -->
+                <label for="feedback">Written Feedback <span class="required-star">*</span></label>
+
+                <textarea id="feedback" name="feedback"
+                          rows="5"
+                          placeholder="Share your feedback here..."
+                          required></textarea>
+
+                <input class="submit_request" type="submit"
+                       value="Submit Evaluation">
+
+            </form>
+
+            <div class="back_link">
+                <a href="member_dashboard.html">
+                    &larr; Back to Member Dashboard
+                </a>
+            </div>
+
+        </section>
+    </div>
+
+</main>
+
+<!-- Website Footer -->
+<footer class="evaluation-footer">
+<div class="footer-content">
+<img src="images/logo.png"
+alt="Beyond Borders Logo"
+class="logo">
+<div class="contact">
+<h3>Contact Us</h3>
+<p>
+<a class="mailLink" href="mailto:Info@BeyoundBorders.com ">Info@BeyoundBorders.com</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&copy; 2026 Beyond Borders.
+All rights reserved.
+</p>
+</div>
+</div>
+</footer>
+<script>
+document.querySelector(".join_form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const rating = document.querySelector('input[name="rating"]:checked');
+
+    if (Number(rating.value) >= 3) {
+        alert("Thank you for your feedback!");
+    } else {
+        alert("We are sorry to hear that. We will work to improve!");
+    }
+
+    window.location.href = "member_dashboard.html";
+});
+</script>
+</body>
+</html>

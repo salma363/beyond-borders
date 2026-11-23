@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- makes the page adapt to different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the title displayed in the browser tab -->
+    <title>Beyond Borders - Home</title>
+
+    <!-- Connects this HTML page to our external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--switch theme button-->
+    <script src="theme.js"></script>
+</head>
+
+<body class="home-page" id="top">
+    <!-- header contains the website logo and name -->
+    <header>
+        <!-- class is used to select and style elements in CSS -->
+        <div class="header-content">
+
+            <img src="images/logo.png" alt="Beyond Borders Logo" class="logo">
+
+            <div>
+                <h2>Beyond Borders</h2>
+                <p>Culture & Experience Club</p>
+            </div>
+
+        </div>
+       <button type="button" id="themeButton">Dark Mode</button>
+    </header>
+
+
+    <!-- nav contains links to the main website pages -->
+    <!-- we use Flexbox in css to arrange these links -->
+
+    <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="offerings.html">Club Offerings</a>
+        <a href="about-us.html">About Us</a>
+        <a href="member_dashboard.html">Member Dashboard</a>
+        <a href="manager-dashboard.html">Manager Dashboard</a>
+    </nav>
+
+
+    <main>
+
+        <section class="welcome">
+
+            <h1>Welcome to Beyond Borders</h1>
+            <p>
+                Explore the world without leaving your city!<br>
+
+                Discover different cultures through interactive
+                workshops, traditional food, languages,
+                and exciting cultural experiences.
+            </p>
+
+            <!-- this is a link styled to look like a button -->
+            <!-- It takes the user to the Club Offerings page -->
+
+            <a href="offerings.html" class="button">
+                View all Experiences
+            </a>
+
+        </section>
+
+
+        <!-- displays three club offerings -->
+        <!-- flexbox will arrange the cards horizontally -->
+
+        <section class="experiences">
+
+            <h2>Explore Our Experiences</h2>
+
+            <div class="cards">
+
+                <div class="card"
+                     data-name="French Basics Workshop"
+                     data-price="80"
+                     data-image="images/frenchBasics.png">
+
+                    <img src="images/frenchBasics.png" alt="French Basics Workshop">
+
+                    <h3>French Basics Workshop</h3>
+
+                    <p>
+                        Learn everyday French phrases
+                        and expressions.<br>
+                        80SAR
+                    </p>
+
+
+                    <!-- additional information is hidden by CSS -->
+                    <!-- It appears when the user hovers over the card -->
+
+                    <p class="extra-info">
+                        Discover French greetings,
+                        useful words, and basic
+                        conversation skills.
+                    </p>
+
+                    <a href="request_to_join.html" class="button">
+                        Join Workshop
+                    </a>
+
+                    <img src="images/bookmark-empty.png"
+                         alt="Bookmark"
+                         class="bookmark-image">
+
+                </div>
+
+
+                <div class="card"
+                     data-name="Italian Pasta Workshop"
+                     data-price="100"
+                     data-image="images/italianPasta.png">
+
+                    <img src="images/italianPasta.png" alt="Italian Pasta Workshop">
+
+                    <h3>Italian Pasta Workshop</h3>
+
+                    <p>
+                        Discover the art of making
+                        traditional Italian pasta.<br>
+                        100SAR
+                    </p>
+
+                    <!-- appears when hovering over the card -->
+
+                    <p class="extra-info">
+                        Learn about Italian ingredients
+                        and traditional pasta
+                        preparation techniques.
+                    </p>
+
+                    <a href="request_to_join.html" class="button">
+                        Join Workshop
+                    </a>
+
+                    <img src="images/bookmark-empty.png"
+                         alt="Bookmark"
+                         class="bookmark-image">
+
+                </div>
+
+
+                <div class="card"
+                     data-name="Sushi Making Workshop"
+                     data-price="120"
+                     data-image="images/sushi.png">
+
+                    <img src="images/sushi.png" alt="Sushi Making Workshop">
+
+                    <h3>Sushi Making Workshop</h3>
+
+                    <p>
+                        Learn how to prepare
+                        delicious Japanese sushi.<br>
+                        120SAR
+                    </p>
+
+                    <!-- appears when hovering over the card -->
+
+                    <p class="extra-info">
+                        Explore Japanese food culture
+                        and practice basic
+                        sushi-making techniques.
+                    </p>
+
+                    <a href="request_to_join.html" class="button">
+                        Join Workshop
+                    </a>
+
+                    <img src="images/bookmark-empty.png"
+                         alt="Bookmark"
+                         class="bookmark-image">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="destinations">
+
+            <h2>Explore Destinations</h2>
+
+            <p>
+                Explore a country and discover its culture.
+            </p>
+
+            <!-- flexbox arranges the countries in one row -->
+
+            <div class="cards">
+
+                <div class="destination-card">
+
+                    <img src="images/france.png" alt="France">
+
+                    <h3>France</h3>
+
+                    <p>
+                       Explore French traditions through pottery
+           and language workshops. 
+                    </p>
+            <button type="button" onclick="showInfo('franceInfo')">
+             Discover More
+            </button>
+
+          <p id="franceInfo" class="destination-extra">
+            French pottery has a long artistic history, especially in Provence, where colorful handmade ceramics are part of local traditions.
+                        The French language is also known for its elegant expressions and polite greetings
+           </p>
+           </div>
+
+
+                <div class="destination-card">
+
+                    <img src="images/italy.png" alt="Italy">
+
+                    <h3>Italy</h3>
+
+                    <p>
+                        Explore Italian culture through pasta
+             and traditional food experiences.
+                    </p>
+
+                <button type="button" onclick="showInfo('italyInfo')">
+                Discover More
+                </button>
+
+              <p id="italyInfo" class="destination-extra">
+                Fresh pasta is an important part of Italian family traditions, with recipes passed down through generations.
+                        Southern Italy, especially the Amalfi Coast, is famous for its fragrant lemons,
+                        which are used in traditional desserts and local specialties.
+             </p>
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img src="images/japan.png" alt="Japan">
+
+                    <h3>Japan</h3>
+
+                    <p>
+                       Experience Japanese traditions through
+                 sushi making and tea ceremonies. 
+                    </p>
+
+                 <button type="button" onclick="showInfo('japanInfo')">
+                  Discover More
+                </button>
+
+                <p id="japanInfo" class="destination-extra">
+                Sushi has been part of Japanese food culture for centuries, reflecting the importance of fresh ingredients and careful preparation.
+                Matcha is traditionally prepared during Japanese tea ceremonies, which emphasize harmony, respect, and mindfulness.
+                 </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- displays club members' ratings and feedback -->
+
+        <section class="reviews">
+
+            <h2>What Our Members Say</h2>
+
+            <div class="cards">
+
+                <div class="review">
+
+                    <h3>Sushi Making Workshop</h3>
+
+                    <p>
+                        "I loved the Japanese cultural experience. It was fun and educational!"
+                    </p>
+
+                    <!-- stars represent the rating -->
+                    <p class="stars">★★★★★</p>
+
+                    <p>- Sara</p>
+
+                </div>
+
+
+                <div class="review">
+
+                    <h3>Italian Pasta Workshop</h3>
+
+                    <p>
+                        "The Italian cooking workshop was amazing. I learned something new!"
+                    </p>
+
+                    <p class="stars">★★★★☆</p>
+
+                    <p>- Nora</p>
+
+                </div>
+
+
+                <div class="review">
+
+                    <h3>French Basics Workshop</h3>
+
+                    <p>
+                        "The French workshop was fun and easy to learn!"
+                    </p>
+
+                    <p class="stars">★★★★★</p>
+
+                    <p>- Lulu</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- It contains contact and copyright information -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <img src="images/logo.png"
+                 alt="Beyond Borders Logo"
+                 class="logo">
+
+            <div class="contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <a class="mailLink" href="mailto:Info@BeyoundBorders.com">Info@BeyoundBorders.com</a>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &copy; 2026 Beyond Borders. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p id="liveClock"></p>
+
+    </footer>
+
+     <!--back to top button-->
+    <a href="#top" id="backToTop">Back to Top</a>
+    <script src="home.js"></script>
+
+    <!-- Connects the page to the bookmark JavaScript functionality -->
+    <script src="member_dashboard.js"></script>
+
+</body>
+</html>

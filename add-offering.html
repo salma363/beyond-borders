@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beyond Borders - Add a New Offering</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body class="joud-manager-page">
+
+    <!-- Website Header -->
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png"
+                 alt="Beyond Borders Logo"
+                 class="logo">
+
+            <div>
+                <h2>Beyond Borders</h2>
+                <p>Culture &amp; Experience Club</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="offerings.html">Club Offerings</a>
+        <a href="about-us.html">About Us</a>
+        <a href="member_dashboard.html">Member Dashboard</a>
+        <a href="manager-dashboard.html">Manager Dashboard</a>
+    </nav>
+
+    <main>
+
+        <!-- Page title -->
+        <section class="manager-title-joud">
+            <h1>Add a New Offering</h1>
+        </section>
+
+        <!-- Add offering form -->
+        <section class="add-offering-section-joud">
+
+            <form id="add-offering-form-joud"
+                  class="add-offering-form-joud"
+                  action="add-offering.html"
+                  method="get">
+
+                <!-- Image selection -->
+                <div class="offering-upload-joud">
+
+                    <div class="offering-image-space-joud">
+                        <input type="file"
+                               id="offering-image-joud"
+                               name="image">
+                    </div>
+
+                    <label for="offering-image-joud">
+                        Upload image
+                    </label>
+
+                </div>
+
+                <!-- Offering name -->
+                <div class="offering-field-joud">
+
+                    <label for="offering-name-joud">
+                        Name of offering
+                        <span class="required-joud">*</span>
+                    </label>
+
+                    <input type="text"
+                           id="offering-name-joud"
+                           name="name">
+
+                </div>
+
+                <!-- Price -->
+                <div class="offering-field-joud">
+
+                    <label for="offering-price-joud">
+                        Price / Registration Fee ( SAR )
+                        <span class="required-joud">*</span>
+                    </label>
+
+                    <input type="text"
+                           id="offering-price-joud"
+                           name="price">
+
+                </div>
+
+                <!-- Instructor name -->
+                <div class="offering-field-joud">
+
+                    <label for="offering-instructor-joud">
+                        Instructor Name
+                        <span class="required-joud">*</span>
+                    </label>
+
+                    <input type="text"
+                           id="offering-instructor-joud"
+                           name="instructor">
+
+                </div>
+
+                <!-- Description -->
+                <div class="offering-field-joud">
+
+                    <label for="offering-description-joud">
+                        Description
+                        <span class="required-joud">*</span>
+                    </label>
+
+                    <textarea id="offering-description-joud"
+                              name="description"
+                              rows="7"></textarea>
+
+                </div>
+
+                <!-- Submit -->
+                <input class="offering-submit-joud"
+                       type="submit"
+                       value="Submit">
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+
+            <img src="images/logo.png"
+                 alt="Beyond Borders Logo"
+                 class="logo">
+
+            <div class="contact">
+
+                <h3>Contact us</h3>
+
+                <p>
+                    <a class="mailLink"
+                       href="mailto:Info@BeyoundBorders.com">
+                        Info@BeyoundBorders.com
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &copy; 2026 Beyond Borders.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="add-offering.js"></script>
+
+</body>
+</html>
