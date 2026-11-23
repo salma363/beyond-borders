@@ -2069,7 +2069,7 @@ width: 150px;
 @media screen and (max-width: 700px) {
     .salma-page .header-content .logo,
     .salma-page .footer-content .logo {
-        width: 60px;
+        width: 75px;
         max-width: 100%;
         height: auto;
     }
