@@ -2809,19 +2809,15 @@ html[data-theme="dark"] a.button {
         justify-content: center;
     }
 }
-@media screen and (max-width: 600px) {
-.salma-page .navigation {
-justify-content: center;
-gap: 0;
+/* Fix date input size on iPhone (Safari) */
+.join_form input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 0;
+    height: 45px;
+    text-align: left;
 }
 
-.salma-page .navigation a {
-flex: 0 1 auto;
-display: block;
-min-height: 0;
-margin: 8px;
-padding: 0;
-overflow-wrap: normal;
+.join_form input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
 }
-}
-
