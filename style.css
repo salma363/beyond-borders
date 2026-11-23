@@ -2809,3 +2809,12 @@ html[data-theme="dark"] a.button {
         justify-content: center;
     }
 }
+@media (max-width: 700px) {
+form input[type="date"] {
+box-sizing: border-box;
+width: 100%;
+max-width: 100%;
+min-width: 0;
+padding-inline: 0 !important;
+}
+}
