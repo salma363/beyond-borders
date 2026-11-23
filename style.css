@@ -2809,6 +2809,21 @@ html[data-theme="dark"] a.button {
         justify-content: center;
     }
 }
+@media screen and (max-width: 600px) {
+body nav.navigation[class] {
+justify-content: center;
+gap: 0;
+}
+
+body nav.navigation[class] a {
+flex: 0 1 auto;
+display: block;
+min-height: 0;
+margin: 8px;
+padding: 0;
+overflow-wrap: normal;
+}
+}
 /* Fix date input size on iPhone (Safari) */
 .join_form input[type="date"] {
     -webkit-appearance: none;
