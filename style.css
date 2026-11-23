@@ -1977,11 +1977,11 @@ width: 150px;
 
 @media screen and (max-width: 600px) {
 
-    .home-page .navigation {
+    nav.navigation{
         justify-content: center;
     }
 
-    .home-page .navigation a {
+    nav.navigationa {
         margin: 8px;
     }
 
