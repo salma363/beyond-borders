@@ -2810,12 +2810,12 @@ html[data-theme="dark"] a.button {
     }
 }
 @media screen and (max-width: 600px) {
-body nav.navigation[class] {
+.salma-page .navigation, .joud-manager-page .navigation {
 justify-content: center;
 gap: 0;
 }
 
-body nav.navigation[class] a {
+.salma-page .navigation a, .joud-manager-page .navigation a {
 flex: 0 1 auto;
 display: block;
 min-height: 0;
