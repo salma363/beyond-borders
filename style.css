@@ -2836,3 +2836,48 @@ overflow-wrap: normal;
 .join_form input[type="date"]::-webkit-date-and-time-value {
     text-align: left;
 }
+@media (max-width: 700px) {
+body footer,
+body footer.evaluation-footer,
+body.joud-dashboard footer {
+background-color: var(--theme-base, #f0f7fc);
+padding: 20px;
+}
+
+body footer .footer-content {
+flex-direction: column;
+align-items: center;
+gap: 12px;
+text-align: center;
+}
+
+body footer .footer-content img.logo {
+width: 75px;
+height: auto;
+}
+
+body footer .footer-content .contact {
+margin: 0;
+}
+
+body footer .footer-content h3 {
+margin: 0 0 5px;
+text-align: center;
+text-transform: capitalize;
+}
+
+body footer .footer-content p {
+margin: 0;
+text-align: center;
+}
+
+body footer .mailLink {
+display: block;
+margin-bottom: 5px;
+}
+
+.home-page footer {
+padding-bottom: 75px;
+}
+}
+
