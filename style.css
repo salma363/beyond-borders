@@ -2880,4 +2880,14 @@ margin-bottom: 5px;
 padding-bottom: 75px;
 }
 }
+@media (max-width: 700px) {
+    header .header-content {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
+    body header .header-content img.logo {
+        width: 75px;
+        height: auto;
+    }
+}
